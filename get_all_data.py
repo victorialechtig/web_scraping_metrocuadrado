@@ -1,15 +1,9 @@
-import os
 from selenium import webdriver
-import pandas as pd
-import re
 from bs4 import BeautifulSoup
 import json
 import time
-import random
 from tqdm import tqdm
 from selenium.webdriver.chrome.options import Options
-import json
-import requests
 from selenium.common.exceptions import TimeoutException
 
 def get_property_info(driver):

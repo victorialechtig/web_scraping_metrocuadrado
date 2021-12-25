@@ -1,4 +1,3 @@
-import json
 import pandas as pd
 from tqdm import tqdm
 from get_all_links import get_all_links

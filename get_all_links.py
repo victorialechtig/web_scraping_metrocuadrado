@@ -1,12 +1,10 @@
 from selenium import webdriver
 import re
-from bs4 import BeautifulSoup
 import json
 import time
 import random
 from tqdm import tqdm
 from selenium.webdriver.chrome.options import Options
-import json
 
 def get_dirty_links(driver):
     elems = driver.find_elements_by_xpath("//a[@href]")
