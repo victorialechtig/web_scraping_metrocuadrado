@@ -8,12 +8,13 @@ with open("total_data.txt", "r") as fp:
     total_data = json.load(fp)
 """
 
-chromedriver_path = input("Escribe la ruta de tu chrome driver")
+chromedriver_path = input("Escribe la ruta de tu chrome driver: ")
 
 def data_normalization(chromedriver_path):
     
-    ciudad = input("Escribe la ciudad de interés (sin tildes y en minúsculas)")
-    tipo_inmueble = input("Escribe el tipo de inmueble (oficina, local, bodega)")
+    ciudad = input("Escribe la ciudad de interés (sin tildes y en minúsculas): ")
+    tipo_inmueble = input("Escribe el tipo de inmueble (oficina, local, bodega): ")
+    
     all_good_links = get_all_links(chromedriver_path, ciudad, tipo_inmueble)
     total_data, bad_urls = get_all_data(all_good_links, chromedriver_path)
     
@@ -29,3 +30,5 @@ def data_normalization(chromedriver_path):
     all_data.to_excel('all_data.xlsx', index=False, columns=columns)
     
     return all_data
+
+data_normalization(chromedriver_path)

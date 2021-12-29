@@ -32,7 +32,7 @@ def next_page(driver):
 
 def get_all_links(chromedriver_path, ciudad, tipo_inmueble):
     options = Options()
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     
     driver = webdriver.Chrome(chromedriver_path, options=options)
     time.sleep(10)
