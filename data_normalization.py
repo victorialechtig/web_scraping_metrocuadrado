@@ -10,7 +10,7 @@ with open("total_data.txt", "r") as fp:
 
 chromedriver_path = input("Escribe la ruta de tu chrome driver")
 
-def data_normalization(total_data, chromedriver_path):
+def data_normalization(chromedriver_path):
     
     ciudad = input("Escribe la ciudad de interés (sin tildes y en minúsculas)")
     tipo_inmueble = input("Escribe el tipo de inmueble (oficina, local, bodega)")
