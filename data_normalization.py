@@ -8,6 +8,8 @@ with open("total_data.txt", "r") as fp:
     total_data = json.load(fp)
 """
 
+chromedriver_path = input("Escribe la ruta de tu chrome driver")
+
 def data_normalization(total_data, chromedriver_path):
     
     ciudad = input("Escribe la ciudad de interés (sin tildes y en minúsculas)")
