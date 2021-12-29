@@ -26,9 +26,8 @@ def data_normalization(chromedriver_path):
         all_data = pd.concat([all_data, pd.json_normalize(i, sep='_')], ignore_index=True)
         
     all_data.drop_duplicates(inplace = True, ignore_index = True,)
-    
-    all_data.to_excel('all_data.xlsx', index=False, columns=columns)
-    
-    return all_data
+
+    all_data.to_excel('%s_%s.xlsx'%(ciudad, tipo_inmueble), index=False, columns=columns)
+    print('Se guardó el archivo en esta misma carpeta con el nombre %s_%s.xlsx'%(ciudad, tipo_inmueble))
 
 data_normalization(chromedriver_path)
